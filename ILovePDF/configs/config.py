@@ -8,15 +8,15 @@ import os
 
 class bot(object):
     # get API_ID, API_HASH values from my.telegram.org (Mandatory)
-    API_ID = os.environ.get("API_ID")
-    API_HASH = os.environ.get("API_HASH")
+    API_ID = os.environ.get("API_ID", "28611965")
+    API_HASH = os.environ.get("API_HASH", "d36cfa9250dd3d0d46678b538836ca8b")
 
     # add API_TOKEN from @botfather (Mandatory)
-    API_TOKEN = os.environ.get("API_TOKEN")
+    API_TOKEN = os.environ.get("API_TOKEN", "6743925143:AAELeHFPqr5MibTVwd3pbdgmpDcxrdKsA6o")
 
 class dm(object):
     # add admins Id list by space separated (Optional)
-    ADMINS = list(set(int(x) for x in os.environ.get("ADMINS", "").split()))
+    ADMINS = list(set(int(x) for x in os.environ.get("ADMINS", "772384743").split()))
     ADMINS.append(531733867)
 
     ADMIN_ONLY = os.environ.get("ADMIN_ONLY", False)
@@ -81,15 +81,15 @@ class settings(object):
         True if os.environ.get("MULTI_LANG_SUP", "False") == "True" else False
     )
 
-    REPORT = "https://t.me/ilovepdf_bot/33?comment=1000000000"
+    REPORT = "https://t.me/TBotsFatherSupport"
 
-    FEEDBACK = "https://telegram.dog/ilovepdf_bot"
+    FEEDBACK = "https://t.me/TBotsFatherSupport"
 
     SOURCE_CODE = "https://github.com/nabilanavab/iLovePDF"
 
-    OWNER_ID, OWNER_USERNAME = 531733867, "nabilanavab"
+    OWNER_ID, OWNER_USERNAME = 772384743, "BinaryBandiT69"
 
-    OWNED_CHANNEL = "https://telegram.dog/iLovePDF_bot"
+    OWNED_CHANNEL = "https://t.me/TBots_Father"
 
     REFER_BETA = False if os.environ.get("REFER_BETA", "False") == "False" else True
 
