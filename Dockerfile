@@ -6,6 +6,8 @@ WORKDIR /ILovePDF
 COPY ILovePDF/requirements.txt requirements.txt
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
+COPY ILovePDF/libgenesis/requirements.txt requirements.txt
+RUN pip install -r requirements.txt
 
 RUN apt update
 RUN apt install -y ocrmypdf
