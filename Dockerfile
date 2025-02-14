@@ -1,6 +1,3 @@
-FROM --platform=linux/arm64 debian:11-slim AS deps
-RUN ls /
-
 FROM python:3.11
 RUN mkdir /pdf && chmod 777 /pdf
 
